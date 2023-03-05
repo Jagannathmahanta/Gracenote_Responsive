@@ -24,9 +24,9 @@
   }
 .card{
     cursor: pointer;
-  min-width:195px;
-  width:195px;
-   height:272px;
+  min-width:169px !important;
+  width:169px ;
+   height:225px !important;
   overflow:hidden;
   margin-right:10px;
   position: relative;

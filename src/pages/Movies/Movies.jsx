@@ -52,8 +52,8 @@ function Movies() {
     centerMode: false,
     infinite: false,
     centerPadding: "60px",
-    slidesToShow: 7,
-    slidesToScroll: 7,
+    slidesToShow: 8,
+    slidesToScroll: 8,
     speed: 500,
     mobileFirst: true,
     responsive: [
