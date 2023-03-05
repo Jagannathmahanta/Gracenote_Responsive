@@ -1,0 +1,115 @@
+const Card=()=> {
+  const dispatch=useDispatch()
+    const sportsData=useSelector((state)=>state.GetMoviesData.moviesData)
+    
+    console.log("Sports Data:::::::::::::::::",sportsData)
+    useEffect(() => {
+      dispatch(getMovies())
+    },[]);
+    return (
+      
+
+
+
+<div className="slide-container">
+
+        <h4>Sports</h4>
+        <Slide>
+        <Container>
+          {
+            sportsData?.map((data) => (
+
+
+              <div className="each-slide">
+                <Content>
+                  <Warp>
+
+                    <img src={`http://developer.tmsimg.com/${data.program.preferredImage.uri.split('?')[0]}?api_key=sutnr87xw6e5duru7eytcxwd`} alt="" />
+                    <b>{data.program.title}</b>
+                    <span>{data.program.eventTitle}</span>
+                  </Warp>
+                </Content>
+              </div>
+
+
+            ))}
+            </Container>
+        </Slide>
+
+      </div>
+      
+    )
+}
+
+///card
+   {/* <Content>
+      <Warp>
+       
+        <img src={img} alt="" />
+      </Warp>
+      <Warp>
+        <img src={img1} alt="" />
+      </Warp>
+      <Warp>
+        <img src={img2} alt="" />
+      </Warp>
+      <Warp>
+        <img src={img3} alt="" />
+      </Warp>
+      <Warp>
+        <img src={img4} alt="" />
+      </Warp>
+    </Content> */}
+
+
+
+
+
+  const [showControle,setshowControle]=useState(false);
+  const[sliderPosition,setSliderPosition]=(0);
+  const dispatch=useDispatch()
+  const sportsData=useSelector((state)=>state.GetMoviesData.moviesData)
+  
+  console.log("Sports Data:::::::::::::::::",sportsData)
+  const listRef =useRef();
+
+  const handleDirection=(direction)=>{
+
+  } 
+
+  useEffect(() => {
+    dispatch(getMovies())
+  },[]);
+  return (
+   
+<></>
+
+    // <Container className='flex column'
+    //   onMouseEnter={() => setshowControle(true)}
+    //   onMouseLeave={() => setshowControle(false)}
+    // >
+    //   <h4>Sports</h4>
+    //   <div className="Wrapper">
+    //     <div className={`slider-action left ${!showControle ? "none" : ""}
+    //       flex j-center a-center`
+    //     }>
+    //       <AiOutlineLeft onClick={() => handleDirection("left")} />
+    //     </div>
+
+    //     <div className="flex slider" ref={listRef}>
+    //       {
+    //         sportsData?.map((data) => (
+
+    //           <SingleSports program={data.program} title={data.title} />
+
+    //         )
+    //         )
+    //       }
+    //     </div>
+    //     <div className={`slider-action right ${!showControle ? "none" : ""}
+    //       flex j-center a-center`
+    //     }>
+    //       <AiOutlineRight onClick={() => handleDirection("right")} />
+    //     </div>
+    //   </div>
+    // </Container>
